@@ -4,6 +4,7 @@
 #include <condition_variable>
 #include <mutex>
 #include <thread>
+#include <iostream>
 
 #if (NAPI_VERSION > 3)
 
@@ -158,12 +159,15 @@ class SignalAfterProgressTestWorker : public AsyncProgressWorker<ProgressData> {
     Napi::Env env = Env();
     bool error = false;
     Napi::String reason = Napi::String::New(env, "No error");
+    std::cout << "On progress " << "count: " << count << std::endl;
     if (count != 1) {
       error = true;
       reason = Napi::String::New(env, "expect 1 count of data");
     }
+    std::cout << "On progress " << "befor make callback" << std::endl;
     _progress.MakeCallback(Receiver().Value(),
                            {Napi::Boolean::New(env, error), reason});
+    std::cout << "On progress " << "after make callback: " << std::endl;
   }
 
  private:
@@ -182,8 +186,8 @@ Object InitAsyncProgressWorker(Env env) {
   Object exports = Object::New(env);
   exports["doWork"] = Function::New(env, TestWorker::DoWork);
   exports["doMalignTest"] = Function::New(env, MalignWorker::DoWork);
-  //exports["doSignalAfterProgressTest"] =
-  //    Function::New(env, SignalAfterProgressTestWorker::DoWork);
+  exports["doSignalAfterProgressTest"] =
+      Function::New(env, SignalAfterProgressTestWorker::DoWork);
   return exports;
 }
 
