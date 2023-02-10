@@ -142,8 +142,6 @@ if (napiVersion < 8 && !filterConditionsProvided) {
 
   if (filterConditionsProvided) { console.log('Starting test suite\n', testModules); } else { console.log('Starting test suite\n'); }
 
-  console.log(testModules)
-  process.exit(0)
 
   // Requiring each module runs tests in the module.
   for (const name of testModules) {
