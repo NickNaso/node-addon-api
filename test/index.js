@@ -105,11 +105,9 @@ if (napiVersion < 3) {
   testModules.splice(testModules.indexOf('version_management'), 1);
 }
 
-testModules.splice(testModules.indexOf('async_progress_worker'), 1);
-
 if (napiVersion < 4 && !filterConditionsProvided) {
   testModules.splice(testModules.indexOf('asyncprogressqueueworker'), 1);
-  // testModules.splice(testModules.indexOf('asyncprogressworker'), 1);
+  testModules.splice(testModules.indexOf('asyncprogressworker'), 1);
   testModules.splice(testModules.indexOf('threadsafe_function/threadsafe_function_ctx'), 1);
   testModules.splice(testModules.indexOf('threadsafe_function/threadsafe_function_existing_tsfn'), 1);
   testModules.splice(testModules.indexOf('threadsafe_function/threadsafe_function_ptr'), 1);

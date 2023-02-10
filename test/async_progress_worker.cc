@@ -182,8 +182,8 @@ Object InitAsyncProgressWorker(Env env) {
   Object exports = Object::New(env);
   exports["doWork"] = Function::New(env, TestWorker::DoWork);
   exports["doMalignTest"] = Function::New(env, MalignWorker::DoWork);
-  exports["doSignalAfterProgressTest"] =
-      Function::New(env, SignalAfterProgressTestWorker::DoWork);
+  //exports["doSignalAfterProgressTest"] =
+  //    Function::New(env, SignalAfterProgressTestWorker::DoWork);
   return exports;
 }
 

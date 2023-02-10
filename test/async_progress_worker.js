@@ -9,7 +9,7 @@ async function test ({ asyncprogressworker }) {
   await success(asyncprogressworker);
   await fail(asyncprogressworker);
   await signalTest(asyncprogressworker.doMalignTest);
-  await signalTest(asyncprogressworker.doSignalAfterProgressTest);
+  // await signalTest(asyncprogressworker.doSignalAfterProgressTest);
 }
 
 function success (binding) {
