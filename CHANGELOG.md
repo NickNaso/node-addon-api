@@ -1,5 +1,20 @@
 # node-addon-api Changelog
 
+## [8.3.0](https://github.com/NickNaso/node-addon-api/compare/v8.2.1...v8.3.0) (2024-10-21)
+
+
+### Features
+
+* add support for nogc types via `BasicEnv`  ([#1514](https://github.com/NickNaso/node-addon-api/issues/1514)) ([b4aeecb](https://github.com/NickNaso/node-addon-api/commit/b4aeecb046480eeaaf1c578a140f71ac0e77094f))
+* add support for requiring basic finalizers ([#1568](https://github.com/NickNaso/node-addon-api/issues/1568)) ([7bcb826](https://github.com/NickNaso/node-addon-api/commit/7bcb826aa4323f450b3c58f9c7fb34243ff13f77))
+
+
+### Bug Fixes
+
+* call base basic finalizer if none defined ([#1574](https://github.com/NickNaso/node-addon-api/issues/1574)) ([294a43f](https://github.com/NickNaso/node-addon-api/commit/294a43f8c6a4c79b3295a8f1b83d4782d44cfe74))
+* failed type cast checks in Symbol::WellKnown ([#1581](https://github.com/NickNaso/node-addon-api/issues/1581)) ([d8523a7](https://github.com/NickNaso/node-addon-api/commit/d8523a708030a0a3abb9d7832051c70e2dafac3d))
+* missing node_api_nogc_env definition ([#1585](https://github.com/NickNaso/node-addon-api/issues/1585)) ([6ba3891](https://github.com/NickNaso/node-addon-api/commit/6ba3891954d8b56215d133e54a86cb621e476b9e))
+
 ## [8.2.1](https://github.com/nodejs/node-addon-api/compare/v8.2.0...v8.2.1) (2024-10-09)
 
 
