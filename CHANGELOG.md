@@ -1,5 +1,27 @@
 # node-addon-api Changelog
 
+## [8.5.0](https://github.com/NickNaso/node-addon-api/compare/v8.4.0...v8.5.0) (2025-07-11)
+
+
+### Features
+
+* add sugar method for PropertyLValue ([#1651](https://github.com/NickNaso/node-addon-api/issues/1651)) ([#1655](https://github.com/NickNaso/node-addon-api/issues/1655)) ([1e57a0a](https://github.com/NickNaso/node-addon-api/commit/1e57a0ae82786c320c784ec6b67f357c85733132))
+* add support for nogc types via `BasicEnv`  ([#1514](https://github.com/NickNaso/node-addon-api/issues/1514)) ([b4aeecb](https://github.com/NickNaso/node-addon-api/commit/b4aeecb046480eeaaf1c578a140f71ac0e77094f))
+* add support for requiring basic finalizers ([#1568](https://github.com/NickNaso/node-addon-api/issues/1568)) ([7bcb826](https://github.com/NickNaso/node-addon-api/commit/7bcb826aa4323f450b3c58f9c7fb34243ff13f77))
+* add Then and Catch methods to Promise ([#1668](https://github.com/NickNaso/node-addon-api/issues/1668)) ([ab3e5fe](https://github.com/NickNaso/node-addon-api/commit/ab3e5fe59570cbb5ed7cc9891b3f25fe373f028f))
+* allow catching all exceptions ([#1593](https://github.com/NickNaso/node-addon-api/issues/1593)) ([c679f6f](https://github.com/NickNaso/node-addon-api/commit/c679f6f4c9dc6bf9fc0d99cbe5982bd24a5e2c7b))
+
+
+### Bug Fixes
+
+* add missing `stdexcept` include to test ([#1634](https://github.com/NickNaso/node-addon-api/issues/1634)) ([14c1a4f](https://github.com/NickNaso/node-addon-api/commit/14c1a4f28278c5b02d0ea910061aad4312bb701e))
+* call base basic finalizer if none defined ([#1574](https://github.com/NickNaso/node-addon-api/issues/1574)) ([294a43f](https://github.com/NickNaso/node-addon-api/commit/294a43f8c6a4c79b3295a8f1b83d4782d44cfe74))
+* failed type cast checks in Symbol::WellKnown ([#1581](https://github.com/NickNaso/node-addon-api/issues/1581)) ([d8523a7](https://github.com/NickNaso/node-addon-api/commit/d8523a708030a0a3abb9d7832051c70e2dafac3d))
+* mark external memory and version APIs as basic ([#1597](https://github.com/NickNaso/node-addon-api/issues/1597)) ([78da4fa](https://github.com/NickNaso/node-addon-api/commit/78da4fa2251af1e4de16efac94d92388f117ae6e))
+* missing napi_delete_reference on ObjectWrap ref ([#1607](https://github.com/NickNaso/node-addon-api/issues/1607)) ([98aae33](https://github.com/NickNaso/node-addon-api/commit/98aae3343c3af36b4befd6b67c4cb19ba49b8d20))
+* missing node_api_nogc_env definition ([#1585](https://github.com/NickNaso/node-addon-api/issues/1585)) ([6ba3891](https://github.com/NickNaso/node-addon-api/commit/6ba3891954d8b56215d133e54a86cb621e476b9e))
+* node-api version 10 support ([#1641](https://github.com/NickNaso/node-addon-api/issues/1641)) ([932ad15](https://github.com/NickNaso/node-addon-api/commit/932ad1503f7a3402716178a91879b5ab850a61b0))
+
 ## [8.4.0](https://github.com/nodejs/node-addon-api/compare/v8.3.1...v8.4.0) (2025-06-11)
 
 
