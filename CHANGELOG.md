@@ -1,5 +1,35 @@
 # node-addon-api Changelog
 
+## [8.8.0](https://github.com/NickNaso/node-addon-api/compare/v8.7.0...v8.8.0) (2026-04-13)
+
+
+### Features
+
+* add Date::New overload for a std::chrono::system_clock::time_point ([#1705](https://github.com/NickNaso/node-addon-api/issues/1705)) ([7fb063d](https://github.com/NickNaso/node-addon-api/commit/7fb063d95ff5ef816d1616f9acf4afac854cfd4c))
+* add Object::GetPrototype and Object::SetPrototype ([#1715](https://github.com/NickNaso/node-addon-api/issues/1715)) ([967bbd5](https://github.com/NickNaso/node-addon-api/commit/967bbd5911c7e90b428d4769b9ab1b1a0cee4451)), closes [#1691](https://github.com/NickNaso/node-addon-api/issues/1691)
+* add SharedArrayBuffer ([#1688](https://github.com/NickNaso/node-addon-api/issues/1688)) ([220bee2](https://github.com/NickNaso/node-addon-api/commit/220bee244fae2e36405bf2bda33cb3985a846912))
+* add String::New overload for string_view ([#1706](https://github.com/NickNaso/node-addon-api/issues/1706)) ([0add130](https://github.com/NickNaso/node-addon-api/commit/0add1306f60b81432da94d13683aa0b06aa52925))
+* add sugar method for PropertyLValue ([#1651](https://github.com/NickNaso/node-addon-api/issues/1651)) ([#1655](https://github.com/NickNaso/node-addon-api/issues/1655)) ([1e57a0a](https://github.com/NickNaso/node-addon-api/commit/1e57a0ae82786c320c784ec6b67f357c85733132))
+* add support for nogc types via `BasicEnv`  ([#1514](https://github.com/NickNaso/node-addon-api/issues/1514)) ([b4aeecb](https://github.com/NickNaso/node-addon-api/commit/b4aeecb046480eeaaf1c578a140f71ac0e77094f))
+* add support for requiring basic finalizers ([#1568](https://github.com/NickNaso/node-addon-api/issues/1568)) ([7bcb826](https://github.com/NickNaso/node-addon-api/commit/7bcb826aa4323f450b3c58f9c7fb34243ff13f77))
+* add support for SharedArrayBuffer in DataViews ([#1714](https://github.com/NickNaso/node-addon-api/issues/1714)) ([7b8d69e](https://github.com/NickNaso/node-addon-api/commit/7b8d69e0ba912291aea0b337f7f1814b1032f7f0))
+* add Then and Catch methods to Promise ([#1668](https://github.com/NickNaso/node-addon-api/issues/1668)) ([ab3e5fe](https://github.com/NickNaso/node-addon-api/commit/ab3e5fe59570cbb5ed7cc9891b3f25fe373f028f))
+* allow catching all exceptions ([#1593](https://github.com/NickNaso/node-addon-api/issues/1593)) ([c679f6f](https://github.com/NickNaso/node-addon-api/commit/c679f6f4c9dc6bf9fc0d99cbe5982bd24a5e2c7b))
+* silence a legitimate vfptr sanitizer warning that is on by default in Android NDK 29 ([#1692](https://github.com/NickNaso/node-addon-api/issues/1692)) ([46673f4](https://github.com/NickNaso/node-addon-api/commit/46673f403adf799cc73419427dd3cf166badff22))
+
+
+### Bug Fixes
+
+* add missing `stdexcept` include to test ([#1634](https://github.com/NickNaso/node-addon-api/issues/1634)) ([14c1a4f](https://github.com/NickNaso/node-addon-api/commit/14c1a4f28278c5b02d0ea910061aad4312bb701e))
+* add missing const to ObjectReference::Set string parameter ([#1713](https://github.com/NickNaso/node-addon-api/issues/1713)) ([845ba8e](https://github.com/NickNaso/node-addon-api/commit/845ba8e4b0888ca20ed3f7c95f9d461cbce338c5))
+* call base basic finalizer if none defined ([#1574](https://github.com/NickNaso/node-addon-api/issues/1574)) ([294a43f](https://github.com/NickNaso/node-addon-api/commit/294a43f8c6a4c79b3295a8f1b83d4782d44cfe74))
+* failed type cast checks in Symbol::WellKnown ([#1581](https://github.com/NickNaso/node-addon-api/issues/1581)) ([d8523a7](https://github.com/NickNaso/node-addon-api/commit/d8523a708030a0a3abb9d7832051c70e2dafac3d))
+* fix -Wextra-semi ([#1718](https://github.com/NickNaso/node-addon-api/issues/1718)) ([7fef973](https://github.com/NickNaso/node-addon-api/commit/7fef9739166ebb89263459e9f4c3363678cd6367))
+* mark external memory and version APIs as basic ([#1597](https://github.com/NickNaso/node-addon-api/issues/1597)) ([78da4fa](https://github.com/NickNaso/node-addon-api/commit/78da4fa2251af1e4de16efac94d92388f117ae6e))
+* missing napi_delete_reference on ObjectWrap ref ([#1607](https://github.com/NickNaso/node-addon-api/issues/1607)) ([98aae33](https://github.com/NickNaso/node-addon-api/commit/98aae3343c3af36b4befd6b67c4cb19ba49b8d20))
+* missing node_api_nogc_env definition ([#1585](https://github.com/NickNaso/node-addon-api/issues/1585)) ([6ba3891](https://github.com/NickNaso/node-addon-api/commit/6ba3891954d8b56215d133e54a86cb621e476b9e))
+* node-api version 10 support ([#1641](https://github.com/NickNaso/node-addon-api/issues/1641)) ([932ad15](https://github.com/NickNaso/node-addon-api/commit/932ad1503f7a3402716178a91879b5ab850a61b0))
+
 ## [8.7.0](https://github.com/nodejs/node-addon-api/compare/v8.6.0...v8.7.0) (2026-03-23)
 
 
